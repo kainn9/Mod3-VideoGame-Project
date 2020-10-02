@@ -216,7 +216,7 @@ const prepMainpage = (char) => {
         <div class="btn-group" role="group" aria-label="Basic example">
             <button id='current-inv' type="button" class="btn btn-secondary">Inventory</button>
             <button id='player-stat' type="button" class="btn btn-secondary">Status</button>
-         <button id='game-opt' type="button" class="btn btn-secondary">Options</button>
+         <button id='game-opt' type="button" class="btn btn-secondary">Mute</button>
         </div>
     </div>
     <div class="d-flex flex-column overflow-auto" hidden="false" id='side-window'>
@@ -316,6 +316,7 @@ let login = () => {
 // ####### Listener Functions ######//
 
 document.addEventListener('DOMContentLoaded', e => {
+
     document.addEventListener('click', e => {
         if (e.target.matches('#login-btn')) {
             login()
@@ -370,6 +371,24 @@ document.addEventListener('DOMContentLoaded', e => {
         } else if (e.target.textContent === 'Rankings') {
             console.log('ranku!')
             pullTop5()
+        } else if (e.target.innerText === 'Mute') {
+
+
+
+            let dsMusic = demon.scene.trappingInJapan;
+
+                switch(dsMusic.isPlaying) {
+                    case true:
+                        demon.scene.sound.setMute(true)
+                        dsMusic.pause()
+                        break;
+                    case false:
+                        demon.scene.sound.setMute(false)
+                        dsMusic.play()
+                        break;
+                    }
+
+
         }
     })
 

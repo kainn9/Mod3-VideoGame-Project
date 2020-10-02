@@ -143,16 +143,24 @@ let mod = (sprite) => {
     // if (playerInv.includes('Speed Orb(MOD)'))
 }
 
-const areUBroke = (cost) => {
+const areUBroke = (cost, cb) => {
+    let test;
         fetch(`http://localhost:3000/users/${demon.currentUser.id}`)
             .then(r =>  r.json())
             .then( u => {
-                let result;
                 let currentYens = u.data.attributes.yennies;
-                cost > currentYens ? (result = true) : (result = false);
 
-                return result;
+               if (cost >= parseInt(currentYens)) {
+                   console.log('yaBroke')
+                   test = u.data.attributes.yennies;
+                   return true
+               } else {
+                   cb()
+               }
             })
+
+
+        console.log(test);
 }
 
 const purchase = (item_id) => {
@@ -287,3 +295,81 @@ const pullTop5 = () => {
         })
 }
 
+const razorBuy = () => {
+    purchase(102)
+    domYenniesSync(3000)
+
+    let check = document.querySelector('#dom-inv');
+    if (check) {
+        let nLi = document.createElement('li');
+        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+        nLi.textContent = 'Razor Blade Orb(MOD)';
+        nLi.dataset.id = 102;
+        check.appendChild(nLi);
+        let redBtn = document.createElement('span');
+        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+        redBtn.textContent = 'x';
+        redBtn.id = 'delete-button'
+        nLi.appendChild(redBtn);
+    }
+}
+
+const escapeScrollBuy = () => {
+    purchase(104)
+    domYenniesSync(300)
+
+    let check = document.querySelector('#dom-inv');
+    if (check) {
+        let nLi = document.createElement('li');
+        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+        nLi.textContent = 'Escape Scroll';
+        nLi.dataset.id = 104;
+        check.appendChild(nLi);
+        let redBtn = document.createElement('span');
+        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+        redBtn.textContent = 'x';
+        redBtn.id = 'delete-button'
+        nLi.appendChild(redBtn);
+        // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+    }
+}
+
+const antiGravBuy = () => {
+    purchase(103)
+    domYenniesSync(2400)
+
+    let check = document.querySelector('#dom-inv');
+    if (check) {
+        let nLi = document.createElement('li');
+        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+        nLi.textContent = 'Anti Gravity Orb(MOD)';
+        nLi.dataset.id = 103;
+        check.appendChild(nLi);
+        let redBtn = document.createElement('span');
+        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+        redBtn.textContent = 'x';
+        redBtn.id = 'delete-button'
+        nLi.appendChild(redBtn);
+        // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+    }
+}
+
+const speederBuy = () => {
+    purchase(105)
+    domYenniesSync(1400)
+
+    let check = document.querySelector('#dom-inv');
+    if (check) {
+        let nLi = document.createElement('li');
+        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+        nLi.textContent = 'Speed Orb(MOD)';
+        nLi.dataset.id = 105;
+        check.appendChild(nLi);
+        let redBtn = document.createElement('span');
+        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+        redBtn.textContent = 'x';
+        redBtn.id = 'delete-button'
+        nLi.appendChild(redBtn);
+        // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+    }
+}

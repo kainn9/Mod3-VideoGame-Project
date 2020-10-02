@@ -24,6 +24,8 @@ class SceneManager {
         }
 
         this.shopScene.create = function () {
+
+
             this.cursorKeys = this.input.keyboard.addKeys(
                 {
                     up:Phaser.Input.Keyboard.KeyCodes.W,
@@ -54,104 +56,104 @@ class SceneManager {
                 
         
             });
-
+            //let mute = this.text.button(0, 0, 'mute');
             let speedText = this.add.text(250, 340, 'Speeder Orb 1400').setColor('green');
             speedText.setInteractive({ useHandCursor: true });
             speedText.on('pointerdown', () => {
-
-                if (!areUBroke(1400)) {
-                    purchase(105)
-                    domYenniesSync(1400)
-
-                    let check = document.querySelector('#dom-inv');
-                    if (check) {
-                        let nLi = document.createElement('li');
-                        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
-                        nLi.textContent = 'Speed Orb(MOD)';
-                        nLi.dataset.id = 105;
-                        check.appendChild(nLi);
-                        let redBtn = document.createElement('span');
-                        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
-                        redBtn.textContent = 'x';
-                        redBtn.id = 'delete-button'
-                        nLi.appendChild(redBtn);
-                        // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
-                    }
-                }
+                areUBroke(1400, speederBuy)
+               // if (areUBroke(1400) === false) {
+                    // purchase(105)
+                    // domYenniesSync(1400)
+                    //
+                    // let check = document.querySelector('#dom-inv');
+                    // if (check) {
+                    //     let nLi = document.createElement('li');
+                    //     nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+                    //     nLi.textContent = 'Speed Orb(MOD)';
+                    //     nLi.dataset.id = 105;
+                    //     check.appendChild(nLi);
+                    //     let redBtn = document.createElement('span');
+                    //     redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+                    //     redBtn.textContent = 'x';
+                    //     redBtn.id = 'delete-button'
+                    //     nLi.appendChild(redBtn);
+                    //     // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+                    // }
+                //}
             });
             let razorText = this.add.text(470, 340, 'Razor Blade Orb 3000').setColor('red');
             razorText.setInteractive({ useHandCursor: true });
             razorText.on('pointerdown', () => {
-
-                if (!areUBroke(3000)) {
-                    purchase(102)
-                    domYenniesSync(3000)
-
-                    let check = document.querySelector('#dom-inv');
-                    if (check) {
-                        let nLi = document.createElement('li');
-                        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
-                        nLi.textContent = 'Razor Blade Orb(MOD)';
-                        nLi.dataset.id = 102;
-                        check.appendChild(nLi);
-                        let redBtn = document.createElement('span');
-                        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
-                        redBtn.textContent = 'x';
-                        redBtn.id = 'delete-button'
-                        nLi.appendChild(redBtn);
-                        // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
-                    }
-                }
+                areUBroke(3000, razorBuy);
+                // if (!areUBroke(3000)) {
+                //     purchase(102)
+                //     domYenniesSync(3000)
+                //
+                //     let check = document.querySelector('#dom-inv');
+                //     if (check) {
+                //         let nLi = document.createElement('li');
+                //         nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+                //         nLi.textContent = 'Razor Blade Orb(MOD)';
+                //         nLi.dataset.id = 102;
+                //         check.appendChild(nLi);
+                //         let redBtn = document.createElement('span');
+                //         redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+                //         redBtn.textContent = 'x';
+                //         redBtn.id = 'delete-button'
+                //         nLi.appendChild(redBtn);
+                //         // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+                //     }
+                // }
             });
 
             let escapeText = this.add.text(620, 500, 'Escape Scroll $300');
             escapeText.setInteractive({ useHandCursor: true });
             escapeText.on('pointerdown', () => {
-
-                if (!areUBroke(300)) {
-                    purchase(104)
-                    domYenniesSync(300)
-
-                    let check = document.querySelector('#dom-inv');
-                    if (check) {
-                        let nLi = document.createElement('li');
-                        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
-                        nLi.textContent = 'Escape Scroll';
-                        nLi.dataset.id = 104;
-                        check.appendChild(nLi);
-                        let redBtn = document.createElement('span');
-                        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
-                        redBtn.textContent = 'x';
-                        redBtn.id = 'delete-button'
-                        nLi.appendChild(redBtn);
-                        // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
-                    }
-                }
+                areUBroke(300, escapeScrollBuy)
+                //if (!areUBroke(300)) {
+                    // purchase(104)
+                    // domYenniesSync(300)
+                    //
+                    // let check = document.querySelector('#dom-inv');
+                    // if (check) {
+                    //     let nLi = document.createElement('li');
+                    //     nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+                    //     nLi.textContent = 'Escape Scroll';
+                    //     nLi.dataset.id = 104;
+                    //     check.appendChild(nLi);
+                    //     let redBtn = document.createElement('span');
+                    //     redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+                    //     redBtn.textContent = 'x';
+                    //     redBtn.id = 'delete-button'
+                    //     nLi.appendChild(redBtn);
+                    //     // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+                    // }
+                //}
             });
 
             let antiGravtext = this.add.text(10, 340, 'Anti-Grav Orb $2400').setColor('purple');
             antiGravtext.setInteractive({ useHandCursor: true });
             antiGravtext.on('pointerdown', () => {
-
-                if (!areUBroke(2400)) {
-                    purchase(103)
-                    domYenniesSync(2400)
-
-                    let check = document.querySelector('#dom-inv');
-                    if (check) {
-                        let nLi = document.createElement('li');
-                        nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
-                        nLi.textContent = 'Anti Gravity Orb(MOD)';
-                        nLi.dataset.id = 103;
-                        check.appendChild(nLi);
-                        let redBtn = document.createElement('span');
-                        redBtn.setAttribute('class', 'badge badge-danger badge-pill')
-                        redBtn.textContent = 'x';
-                        redBtn.id = 'delete-button'
-                        nLi.appendChild(redBtn);
-                        // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
-                    }
-                }
+                    areUBroke(2400, antiGravBuy);
+                //if (!areUBroke(2400)) {
+                    // purchase(103)
+                    // domYenniesSync(2400)
+                    //
+                    // let check = document.querySelector('#dom-inv');
+                    // if (check) {
+                    //     let nLi = document.createElement('li');
+                    //     nLi.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center inventory-items');
+                    //     nLi.textContent = 'Anti Gravity Orb(MOD)';
+                    //     nLi.dataset.id = 103;
+                    //     check.appendChild(nLi);
+                    //     let redBtn = document.createElement('span');
+                    //     redBtn.setAttribute('class', 'badge badge-danger badge-pill')
+                    //     redBtn.textContent = 'x';
+                    //     redBtn.id = 'delete-button'
+                    //     nLi.appendChild(redBtn);
+                    //     // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+                    // }
+                //}
             });
 
             this.antiGravOrb = this.add.sprite(100, 280, 'antiGrav');
