@@ -262,7 +262,7 @@ class SceneManager {
 
     initializeMainScene(game) {
         this.mainScene.preload = function() {
-            this.load.audio('tpja', 'assets/orbs/tpja2.mp3');
+            this.load.audio('tpja', 'assets/orbs/tpja2.ogg');
             loadBar(this)
             map.preLoad();
             demon.preLoad();
