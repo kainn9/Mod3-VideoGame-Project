@@ -27,32 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e47718-3037-4663-9844-805d83fa24b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/demonPlayer/deathS.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/demonPlayer/escape.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/demonPlayer/flame.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/demonPlayer/pickup.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/demonPlayer/quickEscape.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/demonPlayer/soundHit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/npcs/hit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/orb1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/orb2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/orb3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/orb4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/orb5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/orb6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/tpja.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/orbs/tpja2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/shop1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/extraAssets/Skeleton Door/SkeletonDoor_Open_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/shop.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/shop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/demonPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/demonPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/enemies.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/enemies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/items.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sceneManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sceneManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backEnd/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/../backEnd/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backEnd/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../backEnd/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +45,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1i0KKgGzQSLJSkmbQBu9JOW1uA8" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -146,6 +122,7 @@
       <workItem from="1601576307402" duration="1000" />
       <workItem from="1601591676821" duration="29424000" />
       <workItem from="1601621719736" duration="373000" />
+      <workItem from="1601646705353" duration="3464000" />
     </task>
     <servers />
   </component>
