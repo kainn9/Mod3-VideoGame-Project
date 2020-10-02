@@ -24,6 +24,8 @@ class SceneManager {
         }
 
         this.shopScene.create = function () {
+
+
             this.cursorKeys = this.input.keyboard.addKeys(
                 {
                     up:Phaser.Input.Keyboard.KeyCodes.W,
@@ -54,7 +56,7 @@ class SceneManager {
                 
         
             });
-
+            //let mute = this.text.button(0, 0, 'mute');
             let speedText = this.add.text(250, 340, 'Speeder Orb 1400').setColor('green');
             speedText.setInteractive({ useHandCursor: true });
             speedText.on('pointerdown', () => {
