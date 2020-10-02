@@ -27,6 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e47718-3037-4663-9844-805d83fa24b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../backEnd/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../backEnd/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backEnd/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/../backEnd/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backEnd/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../backEnd/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
     </list>

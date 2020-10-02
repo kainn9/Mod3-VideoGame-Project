@@ -56,12 +56,12 @@ class Enemies {
     }
     fskSpawn() {
         const s = this.scene
-        for (let i = 0; i < 49; i++) {
+        for (let i = 0; i < 60; i++) {
             let fsk = s.enemyMap.fsk.create(Math.floor(Math.random() * 6000), Math.floor(Math.random() * 3000), 'fsk');
             fsk.play('fsk');
             fsk.setBounce(1);
-            fsk.setVelocityX(Math.floor((Math.random() * 220) + (100)))
-            fsk.setVelocityY(Math.floor((Math.random() * 220) + (100)))
+            fsk.setVelocityX(Math.floor((Math.random() * 80) + (70)))
+            fsk.setVelocityY(Math.floor((Math.random() * 80) + (70)))
             fsk.setCollideWorldBounds(true);
             s.physics.add.collider(fsk, s.flameSkullBarrier, () => {
                 fsk.flipX = !fsk.flipX;
@@ -90,7 +90,7 @@ class Enemies {
         e.setBounce(1);
         e.setSize(20, 40, true)
         e.setVelocityX(Math.floor((Math.random() * 220) + (100)))
-        if (s.enemyMap[eSpawn].spriteKey === 'ghostEnemy') e.setVelocityY(135)
+        if (s.enemyMap[eSpawn].spriteKey === 'ghostEnemy') e.setVelocityY(Math.floor(Math.random() * 50 + 100))
         s.physics.add.collider(e, s.platforms);
         s.physics.add.collider(e, s.barriers, () => {
             e.flipX = !e.flipX;
@@ -98,7 +98,7 @@ class Enemies {
 
         s.physics.add.collider(e, s.playerDemon, () => {
             let velo;
-            e.flipX ? (velo = 300) : (velo = -300);
+            e.flipX ? (velo = 200) : (velo = -200);
             e.setVelocityX(velo);
             demon.loseHealth()
         })

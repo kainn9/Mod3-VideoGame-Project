@@ -141,7 +141,7 @@ canvas {
     flex-wrap: wrap;
     align-content: space-between;
     margin-left: 20px;
-    height: 600px;
+    height: 100%;
     width: 300px;
     border-width: 6px;
     border-radius: 5px;

@@ -339,7 +339,7 @@ class SceneManager {
             if(this.attack) {
                 this.playerDemon.flipX ? (this.attack.setPosition(this.playerDemon.x + 35, this.playerDemon.y + 40)) : (this.attack.setPosition(this.playerDemon.x - 35, this.playerDemon.y + 40))
             }
-            demon.move();
+            demon.move2();
             demon.attackBasic();
             demon.razorBladeAttack()
             mod(this.playerDemon);

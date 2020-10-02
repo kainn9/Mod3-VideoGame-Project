@@ -80,7 +80,35 @@ class DemonPlayer {
         } else if (scene.cursorKeys.down.isDown) {
             scene.playerDemon.setVelocity(0, 150 * scene.playerDemon.speeder)
         } else if (scene.playerDemon.antiGrav){
-            scene.playerDemon.setVelocity(0,0);
+
+            //want to add slight drag
+            scene.playerDemon.setVelocityY(0);
+        }
+    }
+    move2 () {
+        const scene = this.scene;
+
+        if (scene.cursorKeys.left.isDown) {
+            scene.playerDemon.setVelocityX(-130 * scene.playerDemon.speeder);
+            scene.playerDemon.flipX = false;
+        } else if (scene.cursorKeys.right.isDown) {
+            scene.playerDemon.setVelocityX(130 * scene.playerDemon.speeder);
+            scene.playerDemon.flipX = true;
+        } else if (scene.cursorKeys.up.isDown) {
+            scene.playerDemon.setVelocityY(-130 * scene.playerDemon.speeder)
+        } else if (scene.cursorKeys.left.isDown && scene.cursorKeys.up.isDown) {
+            scene.playerDemon.setVelocity(-130 * scene.playerDemon.speeder, -130 * scene.playerDemon.speeder)
+        } else if (scene.cursorKeys.right.isDown && scene.cursorKeys.up.isDown) {
+            scene.playerDemon.setVelocity(130 * scene.playerDemon.speeder, -130 * scene.playerDemon.speeder)
+        } else if (scene.cursorKeys.down.isDown) {
+            scene.playerDemon.setVelocity(0, 150 * scene.playerDemon.speeder)
+        } else if (scene.playerDemon.antiGrav){
+
+            //want to add slight drag
+            scene.playerDemon.setVelocity(0, 0);
+            
+        } else {
+            scene.playerDemon.body.setDrag(100, 0)
         }
     }
 
@@ -94,8 +122,11 @@ class DemonPlayer {
            setTimeout(() => {
                if (player.flipX) {
                    scene.attack = scene.attacks.create(player.x + 20, player.y + 20, `hitbox`)
+                   scene.attack.body.setSize(100, 40)
+                
                }  else {
                    scene.attack = scene.attacks.create(player.x - 20, player.y + 20, `hitbox`);
+                   scene.attack.body.setSize(100, 40)
                }
            }, 300)
             this.isAttacking = true;

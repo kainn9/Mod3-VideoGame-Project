@@ -329,7 +329,8 @@ document.addEventListener('DOMContentLoaded', e => {
             itemInfo.hidden = true;
             let sWin = document.querySelector("#side-window")
             sceneManager.ph = sWin;
-            sceneManager.parent = sWin.parentElement;
+            sceneManager.parent = sWin.parentNode;
+            console.group(sceneManager.parent)
             sWin.remove()
             renderStatus()
 
@@ -339,14 +340,14 @@ document.addEventListener('DOMContentLoaded', e => {
             if (statusWin) {
                 sceneManager.status = statusWin;
                 statusWin.remove();
+        
             }
 
-            sceneManager.parent.append(sceneManager.ph);
+            sceneManager.parent.appendChild(sceneManager.ph);
             let theUL = sceneManager.ph.firstElementChild;
             syncInv(theUL);
 
-            //class : 'list-group-item d-flex justify-content-between align-items-center inventory-items'
-            // btn class : 'badge badge-danger badge-pill' id: 'delete-button' x <span>
+            
 
         } else if(e.target.matches('.inventory-items')) {
             renderIteminfo(e.target)
