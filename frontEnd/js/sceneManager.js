@@ -343,6 +343,7 @@ class SceneManager {
             this.playerDemon.body.setSize(40, 90, true)
 
             if (this.cursorKeys.x.isDown && this.playerDemon.quickEscapeScroll) {
+                //this.playerDemon
                 consumeScroll()
                 this.quickEscapeAudio.play()
                 this.playerDemon.play('desc')

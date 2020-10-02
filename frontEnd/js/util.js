@@ -116,7 +116,7 @@ let mod = (sprite) => {
     sprite.antiGrav = false;
     sprite.razorMod = false;
     sprite.dropMod = false
-    sprite.quickEscape = 1;
+    sprite.quickEscapeScroll = false;
     sprite.speeder = 1
 
     let playerInv = []
