@@ -286,7 +286,8 @@ class SceneManager {
                 volume: 1,
                 detune: 0,
                 seek: 0,
-                loop: false,
+                rate: 0.75,
+                loop: true,
                 delay: 0,
             })
 
