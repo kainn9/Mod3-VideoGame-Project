@@ -25,14 +25,14 @@ const gen = (xDiv, yDiv, scene) => {
         while(x <= scene.map.width ) {
             let xCord = Math.floor(Math.random() * (xInc * 0.75 + (xInc * 0.25))) + x;
             let yCord = Math.floor(Math.random() * (yInc * 0.75 + (yInc * 0.25)))  + y;
-
-            //let platform = scene.physics.add.sprite(xCord, yCord, 'platform');
-            let p = scene.platforms.create(xCord, yCord, 'platform').body.setAllowGravity(false).setImmovable(true);
-            let it = scene.barriers.create(xCord, yCord -300, 'top').body.setAllowGravity(false).setImmovable(true);
-            let is1 = scene.barriers.create(xCord - 160 , yCord - 130, 'side').body.setAllowGravity(false).setImmovable(true);
-            let is2 = scene.barriers.create(xCord + 160 , yCord - 130, 'side').body.setAllowGravity(false).setImmovable(true);
-            enemies.spawn(xCord, yCord);
-
+            if (yCord < 5700) {
+                //let platform = scene.physics.add.sprite(xCord, yCord, 'platform');
+                let p = scene.platforms.create(xCord, yCord, 'platform').body.setAllowGravity(false).setImmovable(true);
+                let it = scene.barriers.create(xCord, yCord -300, 'top').body.setAllowGravity(false).setImmovable(true);
+                let is1 = scene.barriers.create(xCord - 160 , yCord - 130, 'side').body.setAllowGravity(false).setImmovable(true);
+                let is2 = scene.barriers.create(xCord + 160 , yCord - 130, 'side').body.setAllowGravity(false).setImmovable(true);
+                enemies.spawn(xCord, yCord);
+            }
 
             //scene.platforms.create(xCord, yCord, `platform`);
             console.log('created sprite at: ', xCord, yCord);

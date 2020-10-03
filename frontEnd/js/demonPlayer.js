@@ -32,7 +32,7 @@ class DemonPlayer {
     create() {
         let s = this.scene;
         s.attacks = s.physics.add.group()
-        s.playerDemon = s.physics.add.sprite(3000, 6000, 'playerDemon');
+        s.playerDemon = s.physics.add.sprite(3000, 5900, 'playerDemon');
 
         s.itemPickup = s.sound.add('pU');
         s.demoHitSound = s.sound.add('dHitS');
@@ -169,8 +169,9 @@ class DemonPlayer {
         }
     }
     createHealth() {
+        if (this.scene.health) this.resetHealth()
         const scene = this.scene;
-
+   
         scene.health = scene.add.group({
             classType: Phaser.GameObjects.Image
         })
@@ -179,17 +180,23 @@ class DemonPlayer {
             setScale: {x: 0.1, y: 0.1},
             setXY: {x: 20, y: 20, stepX: 45},
             setScrollFactor: {x: 0, y: 0},
-            quantity: 5,
+            quantity: demon.hp,
 
         })
         scene.health.depth = 2;
+    }
+
+    resetHealth() {
+        
+        this.scene.health.destroy()
     }
 
     loseHealth() {
         console.log('ya hit')
         if (this.alive && !this.attacked) {
             let test = this.scene.health.children.entries[this.hp -1];
-            test.setPosition(-2000, -2000)
+            console.log(test);
+            test.destroy()
             this.hp -= 1;
             this.attacked = true
             this.scene.demoHitSound.play();

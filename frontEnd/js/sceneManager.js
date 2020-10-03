@@ -351,6 +351,9 @@ class SceneManager {
                 this.quickEscapeAudio.play()
                 this.playerDemon.play('desc')
                 setTimeout(() => {
+                    demon.hp = 5;
+                    demon.resetHealth()
+                    demon.createHealth()
                     this.playerDemon.play('demonIdle');
                     this.scene.switch(sceneManager.shopScene);
                     let ul = document.querySelector('#dom-inv');
