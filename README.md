@@ -5,12 +5,14 @@ mod3 project week w/ Vlad
 
 To Install:
   FrontEnd - use npm install
+  terminal command to load game pag
+  
   
   backEnd - use bundle install
   
   To run:
-  run rails s from backend dir
-  run http-server from frontEnd dir
+  rails s, from backEnd dir
+  ./node_modules/.bin/http-server -a localhost -p 8000 -c-1, from frontEnd dir
   
   
   ASSET CREDS:
