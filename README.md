@@ -27,7 +27,7 @@ Flappy Bird is a web game/app designed in 1 week by Vlad(https://github.com/Vnap
 ## Resources Used:
 * https://rubyonrails.org/
 * https://phaser.io/phaser3
-### Games Assets:
+### Game Assets:
 * https://ansimuz.itch.io/gothicvania-patreon-collection
 * https://mythril-age.itch.io/mythril-age-sfx-pack-v1?download
 * https://ansimuz.itch.io/phaser-tutorial-excercise-sound?download
