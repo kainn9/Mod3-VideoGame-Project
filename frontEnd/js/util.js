@@ -122,13 +122,13 @@ let mod = (sprite) => {
     let playerInv = []
     let nodeVentory = document.querySelectorAll('.inventory-items');
     nodeVentory.forEach(li => {
-        if (parseInt(li.dataset.id) === 102) sprite.razorMod = true;
+        if (parseInt(li.dataset.id) === 3) sprite.razorMod = true;
 
-        if (parseInt(li.dataset.id) === 103) sprite.antiGrav = true;
+        if (parseInt(li.dataset.id) === 4) sprite.antiGrav = true;
 
-        if (parseInt(li.dataset.id) === 104) sprite.quickEscapeScroll = true;
+        if (parseInt(li.dataset.id) === 5) sprite.quickEscapeScroll = true;
 
-        if (parseInt(li.dataset.id) === 105) sprite.speeder = 2;
+        if (parseInt(li.dataset.id) === 6) sprite.speeder = 2;
     })
     playerInv = playerInv.filter(el => {
         return el !== 'X'
@@ -296,7 +296,7 @@ const pullTop5 = () => {
 }
 
 const razorBuy = () => {
-    purchase(102)
+    purchase(3)
     domYenniesSync(3000)
 
     let check = document.querySelector('#dom-inv');
@@ -315,7 +315,7 @@ const razorBuy = () => {
 }
 
 const escapeScrollBuy = () => {
-    purchase(104)
+    purchase(5)
     domYenniesSync(300)
 
     let check = document.querySelector('#dom-inv');
@@ -335,7 +335,7 @@ const escapeScrollBuy = () => {
 }
 
 const antiGravBuy = () => {
-    purchase(103)
+    purchase(4)
     domYenniesSync(2400)
 
     let check = document.querySelector('#dom-inv');
@@ -355,7 +355,7 @@ const antiGravBuy = () => {
 }
 
 const speederBuy = () => {
-    purchase(105)
+    purchase(6)
     domYenniesSync(1400)
 
     let check = document.querySelector('#dom-inv');

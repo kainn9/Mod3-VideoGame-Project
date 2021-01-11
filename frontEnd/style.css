@@ -173,7 +173,7 @@ canvas {
     /* background-image: url(https://i.pinimg.com/originals/d4/e7/d0/d4e7d0767499940d0ff148edc8c48e47.png); */
     /* background-color: #c98e57; */
     background-image: linear-gradient(to top left, rgb(78, 43, 2), rgb(117, 57, 1));
-    height: 65%;
+    height: fit-content;
     /* width: 90%; */
     margin-bottom: 20px;
     padding: 5px;
