@@ -12,18 +12,18 @@ class Items {
     create() {
         const invList = document.querySelector('#dom-inv');
         const s = this.scene;
-        s.items = s.physics.add.group()
+        s.items = s.physics.add.group();
         buildAnimation('idleChest', 'chest',8, -1 , s);
         buildAnimation('chest-open', 'chestOpen',8, -1 , s);
 
-    }
+    };
 
     spawn(x, y) {
+
         const invList = document.querySelector('#dom-inv');
         const s = this.scene;
 
-        console.log(s.allItems)
-        let chest =  s.items.create(x, y, `chest`)
+        let chest =  s.items.create(x, y, `chest`);
         chest.body.setAllowGravity(false)
         chest.play('idleChest')
         chest.contents = s.allItems[Math.floor(Math.random() * s.allItems.length)];
@@ -31,11 +31,12 @@ class Items {
 
         s.physics.add.collider(chest, s.platforms);
 
-        s.physics.add.collider(chest, s.playerDemon, (chest) =>{
+        s.physics.add.collider(chest, s.playerDemon, (chest) => {
             let item = chest.contents;
             chest.contents = null;
             chest.destroy();
-            s.itemPickup.play()
+            s.itemPickup.play();
+
             fetch('http://localhost:3000/pickUP', {
                 method: 'POST',
                 headers: {
@@ -44,13 +45,11 @@ class Items {
                 },
                 body: JSON.stringify({item_id: item.id, user_id: demon.currentUser.id})
             })
-                .then(r => r.json())
-                .then(item => {
-                    let ul = document.querySelector('#dom-inv');
-                    if (ul) syncInv(ul);
-                })
-
-        //list-group-item d-flex justify-content-between align-items-center inventory-items
-        })
-    }
-}
+            .then(r => r.json())
+            .then(item => {
+                let ul = document.querySelector('#dom-inv');
+                if (ul) syncInv(ul);
+            });
+        });
+    };
+};
