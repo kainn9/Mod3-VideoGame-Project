@@ -25,7 +25,7 @@ Item.create(name: 'Razor-Wind', description: 'Infinite Arrows, Flame +2', itemTy
 Item.create(name: 'Deaths-Dance', description: 'League of Legends Item, LifeSteal +2', itemType: 'Weapon', value: 75)
 Item.create(name: 'Razor Blade Orb(MOD)', description: 'You can fire a razor blade by pressing F', itemType: 'MOD', value: 3000)
 Item.create(name: 'Anti Gravity Orb(MOD)', description: 'Gravity No longer bothers you!', itemType: 'MOD', value: 2400)
-Item.create(name: 'Quick Escape(click the x key to escape)', description: 'It is rought out here!!!', itemType: 'Consumable', value: 300)
+Item.create(name: 'Quick Escape(click the x key to escape)', description: 'It is rough out here!!!', itemType: 'Consumable', value: 300)
 Item.create(name: 'Speed Orb(MOD)', description: 'GOTTA GO FAST', itemType: 'MOD', value: 1400)
 
 Item.create(name: 'Cana Tuna', description: 'Solid White Albacore, packed in water.', itemType: 'Loot', value: 5)
