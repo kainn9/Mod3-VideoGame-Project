@@ -9,36 +9,48 @@ class UsersController < ApplicationController
     end
 
     def login
-        wrongPassword = {error: "Wrong info"}
+
+        wrongPassword = {
+            error: "Wrong info"
+        }
 
         user = User.find_by(username: params[:username])
+
         if user && user.password_digest == params['password_digest']
 
             render json: UserSerializer.new(user)
-            # render json: user
+   
         else
-            #byebug
+       
             User.create(username: params[:username], password: params[:password_digest], yennies: 300, level: 0)
             render json: UserSerializer.new(user)
+
         end
+
     end
 
     def index
-        users = User.all 
-         # render json: users
 
+        users = User.all 
         render json: UserSerializer.new(users)
+
     end
 
     def update
+
         user = User.find(params[:id])
         user.update(params.require(:user).permit(:level, :yennies))
 
-        render json: {message: 'doesnt matter dude'}
+        render json: {
+            message: '---'
+        }
+
     end
 
     def destroy_items
+
         user =  User.find(params[:id]);
+
         user.inventories.each do |rela|
             rela.destroy();
         end
@@ -55,9 +67,9 @@ class UsersController < ApplicationController
         
         users = User.all.sort_by { |u| u[:yennies] }.reverse;
         top5 = users.take(10);
-        #byebug
-        
+
         render json: top5
+
     end
 
     private
@@ -65,7 +77,6 @@ class UsersController < ApplicationController
     def userParams
         params.require(:user).permit(:username, :password_digest)    
     end
-
-    
+ 
 end
 
