@@ -21,7 +21,7 @@ Flappy Bird is a web game/app designed in 1 week by Vlad(https://github.com/Vnap
   * cd into folder 'frontend'
   * run 'npm i'
   * run './node_modules/.bin/http-server -a localhost -p 8000 -c-1'
-  * you should now be able play from: http://localhost:8001/
+  * you should now be able play from: http://localhost:8000/
 
   
 ## Resources Used:
